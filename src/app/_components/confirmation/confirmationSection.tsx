@@ -86,12 +86,12 @@ const ConfirmationSection = ({ id }: { id: string }) => {
                             <div className="font-bold pt-10 pb-0">
                                 {guest.name ?? "Invitado"}
                             </div>
-                            <div className="pt-0">
+                            <div className="pt-0 pb-8">
                                 {guest.confirmedPasses} {guest.confirmedPasses === 1 ? "pase confirmado" : "pases confirmados"}
                             </div>
-                            <div className="pb-8">
+                            {/* <div className="pb-8">
                                 {guest.vegetarian == 1 ? `(${guest.vegetarian} platillo especial)` : `${guest.vegetarian} platillos especiales`}
-                            </div>
+                            </div> */}
                             <Button label="Cambiar respuesta" onClick={() => setModify(true)} />
                         </>
                     ) : (
@@ -114,7 +114,7 @@ const ConfirmationSection = ({ id }: { id: string }) => {
                                 </>
                             )}
 
-                            <div className="flex flex-col items-center justify-center pt-10">
+                            {/* <div className="flex flex-col items-center justify-center pt-10">
                                 <div className="pb-2 font-semibold">
                                     ¿Vegetariano/Vegano?
                                 </div>
@@ -124,7 +124,7 @@ const ConfirmationSection = ({ id }: { id: string }) => {
                                 >
                                     <FiPlus />
                                 </button>
-                            </div>
+                            </div> */}
 
                             <div className="flex flex-row justify-center gap-4 pt-10">
                                 <Button label="Más opciones" secondary onClick={() => setOpenModal(true)} />
