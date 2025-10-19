@@ -6,7 +6,7 @@ import Login from "~/app/_components/admin/login";
 import GuestList from "~/app/_components/admin/guestList";
 
 const AdminPage = async () => {
-    const session = await auth();
+    // const session = await auth();
 
     // if (!session?.user) {
     //     return (
