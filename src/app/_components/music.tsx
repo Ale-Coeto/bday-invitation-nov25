@@ -13,7 +13,7 @@ const BackgroundMusic = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowOverlay(false);
-        }, 4000);
+        }, 2000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -47,7 +47,7 @@ const BackgroundMusic = () => {
             )}
 
             <div className="fixed bottom-4 right-4 z-50">
-                <audio ref={audioRef} loop src="/audio/ill_be.mp3" />
+                <audio ref={audioRef} loop src="/audio/BeyondTheSea.mp3" />
                 {!started ? (
                     <button
                         onClick={startMusic}
