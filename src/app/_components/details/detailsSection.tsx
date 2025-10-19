@@ -10,7 +10,7 @@ const DetailsSection = () => {
                 <div className="w-full flex flex-col items-center justify-center text-center">
                     <div className="text-lg pb-5 italic">
                         La juventud es bellísima pero complicada, la adultez es fuerte pero esforzada,
-                        la vejes es fruto de todo lo vivido...
+                        la vejez es fruto de todo lo vivido...
                     </div>
 
                     <div className="text-lg pb-5 italic">
