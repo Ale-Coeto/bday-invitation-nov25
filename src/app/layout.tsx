@@ -7,8 +7,8 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Aída y Víctor",
-  description: "11/10/2025",
+  title: "Ayda Jiménez",
+  description: "22/11/2025",
   icons: [{ rel: "icon", url: "/bdaylogo.png" }],
 };
 
