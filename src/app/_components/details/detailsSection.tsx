@@ -53,7 +53,7 @@ const DetailsSection = () => {
 
                     </div>
 
-                    <Button label="Ubicación" url="" className="mt-5" />
+                    <Button label="Ubicación" url="https://maps.app.goo.gl/MGNtKeVYAgAX1iVK7?g_st=iw" className="mt-5" />
 
 
                 </div>
