@@ -103,10 +103,10 @@ const GuestList = () => {
                                 </div> */}
                                 <div className="mt-4">
                                     <button
-                                        onClick={() => copy(`https://https://ayda-jimenez.vercel.app//${guest.id}`)}
+                                        onClick={() => copy(`https://ayda-jimenez.vercel.app/${guest.id}`)}
                                         className="text-gold text-xs break-all hover:underline"
                                     >
-                                        https://https://ayda-jimenez.vercel.app/{guest.id}
+                                        https://ayda-jimenez.vercel.app/{guest.id}
                                     </button>
                                 </div>
                             </div>
