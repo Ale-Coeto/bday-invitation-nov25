@@ -1,0 +1,28 @@
+import { auth } from "~/server/auth";
+import { api } from "~/trpc/server";
+import CountdownSection from "./_components/countdown/countdownSection";
+import DetailsSection from "./_components/details/detailsSection";
+import CeremoniesSection from "./_components/ceremonies/ceremoniesSection";
+import GallerySection from "./_components/gallery/gallerySection";
+import Footer from "./_components/footer";
+import BackgroundMusic from "./_components/music";
+import HousingSection from "./_components/housing/housingSection";
+
+export default async function Home() {
+  const session = await auth();
+
+  if (session?.user) {
+    void api.post.getLatest.prefetch();
+  }
+
+  return (
+    <>
+      <div className="flex flex-col items-center">
+        <CountdownSection />
+        <DetailsSection />
+        <Footer />
+      </div>
+      <BackgroundMusic />
+    </>
+  );
+}
