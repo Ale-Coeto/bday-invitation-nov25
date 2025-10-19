@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Ayda Jiménez",
-  description: "22/11/2025",
+  description: "80 cumpleaños",
   icons: [{ rel: "icon", url: "/bdaylogo.png" }],
 };
 
