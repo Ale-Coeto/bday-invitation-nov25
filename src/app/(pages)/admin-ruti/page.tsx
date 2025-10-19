@@ -6,20 +6,20 @@ import Login from "~/app/_components/admin/login";
 import GuestList from "~/app/_components/admin/guestList";
 
 const AdminPage = async () => {
-    // const session = await auth();
+    const session = await auth();
 
-    // if (!session?.user) {
-    //     return (
-    //         <div className="flex flex-col items-center justify-center min-h-screen">
-    //             <div className="bg-white flex flex-col flex-items-center p-10">
-    //                 <h1 className="font-bold">Access Denied</h1>
-    //                 <p>You must be logged in to view this page.</p>
-    //                 <Login />
-    //             </div>
+    if (!session?.user) {
+        return (
+            <div className="flex flex-col items-center justify-center min-h-screen">
+                <div className="bg-white flex flex-col flex-items-center p-10">
+                    <h1 className="font-bold">Access Denied</h1>
+                    <p>You must be logged in to view this page.</p>
+                    <Login />
+                </div>
 
-    //         </div>
-    //     )
-    // }
+            </div>
+        )
+    }
 
     return (
         <div className="flex flex-col items-center py-20 bg-white min-h-screen">
@@ -29,14 +29,14 @@ const AdminPage = async () => {
                 <GuestList />
             </div>
 
-            {/* <Link
+            <Link
                 href={"/api/auth/signout"}
             >
                 <Button
                     label="Sign out"
                     className="mt-4"
                 />
-            </Link> */}
+            </Link>
         </div>
     );
 }
