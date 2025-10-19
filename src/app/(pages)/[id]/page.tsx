@@ -16,26 +16,7 @@ const WeekPage = ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="flex flex-col items-center">
             <CountdownSection />
             <DetailsSection />
-            <GallerySection
-                images={[{ src: "/images/image2.jpg", groupWithNext: true }]}
-            />
-            <CeremoniesSection />
-            <NotesSection />
             <ConfirmationSection id={id} />
-            <GallerySection
-                images={[{ src: "/images/image4.jpg", groupWithNext: true }]}
-            />
-            <HousingSection />
-            <GallerySection
-                images={[
-                    { src: "/images/gallery/image1.jpg", groupWithNext: true },
-                    { src: "/images/gallery/image2.jpg" },
-                    { src: "/images/gallery/image3.jpg" },
-                    { src: "/images/gallery/image4.jpg", groupWithNext: true },
-                    { src: "/images/gallery/image5.jpg" },
-                    { src: "/images/gallery/image6.jpg" },
-                ]}
-            />
             <Footer />
             <BackgroundMusic />
         </div>

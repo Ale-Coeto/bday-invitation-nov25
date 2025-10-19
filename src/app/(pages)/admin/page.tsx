@@ -11,16 +11,18 @@ const AdminPage = async () => {
     if (!session?.user) {
         return (
             <div className="flex flex-col items-center justify-center min-h-screen">
-                <h1 className="font-bold">Access Denied</h1>
-                <p>You must be logged in to view this page.</p>
-                <Login />
+                <div className="bg-white flex flex-col flex-items-center p-10">
+                    <h1 className="font-bold">Access Denied</h1>
+                    <p>You must be logged in to view this page.</p>
+                    <Login />
+                </div>
 
             </div>
         )
     }
 
     return (
-        <div className="flex flex-col items-center py-20">
+        <div className="flex flex-col items-center py-20 bg-white">
             <h1 className="font-bold text-lg">Invitados</h1>
             <p> Lista de invitados, estado y número de pases</p>
             <div>

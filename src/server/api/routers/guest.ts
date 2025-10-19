@@ -5,7 +5,7 @@ export const guestRouter = createTRPCRouter({
     getGuest: publicProcedure
     .input(z.string())
     .query(async ({ ctx, input }) => {
-        const guest = await ctx.db.guest.findUnique({
+        const guest = await ctx.db.invitado.findUnique({
             where: { id: input },
         });
 
@@ -18,7 +18,7 @@ export const guestRouter = createTRPCRouter({
 
     getAll: protectedProcedure
     .query(async ({ ctx }) => {
-        const guests = await ctx.db.guest.findMany({
+        const guests = await ctx.db.invitado.findMany({
             orderBy: { name: "asc" },
         });
         return guests;
@@ -30,7 +30,7 @@ export const guestRouter = createTRPCRouter({
         confirmedPasses: z.number()}
     ))
     .mutation(async ({ ctx, input }) => {
-        const guest = await ctx.db.guest.update({
+        const guest = await ctx.db.invitado.update({
             where: { id: input.id },
             data: { 
                 responded: true,
@@ -51,7 +51,7 @@ export const guestRouter = createTRPCRouter({
         vegetarian: z.number().min(0).max(10).default(0),
     }))
     .mutation(async ({ ctx, input }) => {
-        const guest = await ctx.db.guest.update({
+        const guest = await ctx.db.invitado.update({
             where: { id: input.id },
             data: {
                 vegetarian: input.vegetarian,
@@ -67,7 +67,7 @@ export const guestRouter = createTRPCRouter({
         if (!input) {
             return null;
         }
-        const guest = await ctx.db.guest.findUnique({
+        const guest = await ctx.db.invitado.findUnique({
             where: { id: input },
         });
 
@@ -84,7 +84,7 @@ export const guestRouter = createTRPCRouter({
         passes: z.number().min(1).max(10).default(1),
     }))
     .mutation(async ({ ctx, input }) => {
-        const newGuest = await ctx.db.guest.create({
+        const newGuest = await ctx.db.invitado.create({
             data: {
                 name: input.name,
                 passes: input.passes,
@@ -101,7 +101,7 @@ export const guestRouter = createTRPCRouter({
         passes: z.number().min(1).max(10).default(1),
     }))
     .mutation(async ({ ctx, input }) => {   
-        const updatedGuest = await ctx.db.guest.update({
+        const updatedGuest = await ctx.db.invitado.update({
             where: { id: input.id },
             data: {
                 name: input.name,
@@ -119,7 +119,7 @@ export const guestRouter = createTRPCRouter({
     deleteGuest: protectedProcedure
     .input(z.string())
     .mutation(async ({ ctx, input }) => {
-        const deletedGuest = await ctx.db.guest.delete({
+        const deletedGuest = await ctx.db.invitado.delete({
             where: { id: input },
         });
 
