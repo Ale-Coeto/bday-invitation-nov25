@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 export const metadata: Metadata = {
   title: "Aída y Víctor",
   description: "11/10/2025",
-  icons: [{ rel: "icon", url: "/A+V.png" }],
+  icons: [{ rel: "icon", url: "/bdaylogo.png" }],
 };
 
 const geist = Geist({
