@@ -22,7 +22,7 @@ const AdminPage = async () => {
     }
 
     return (
-        <div className="flex flex-col items-center py-20 bg-white">
+        <div className="flex flex-col items-center py-20 bg-white min-h-screen">
             <h1 className="font-bold text-lg">Invitados</h1>
             <p> Lista de invitados, estado y número de pases</p>
             <div>

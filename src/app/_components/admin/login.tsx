@@ -5,9 +5,9 @@ import { signIn } from 'next-auth/react';
 const Login = () => {
     return (
         <Button
-            label="Sign in"
+            label="Sign in with Google"
             className="mt-4"
-            onClick={() => signIn(undefined, { callbackUrl: '/admin' })}
+            onClick={() => signIn('google', { callbackUrl: '/admin' })}
         />
     )
 }

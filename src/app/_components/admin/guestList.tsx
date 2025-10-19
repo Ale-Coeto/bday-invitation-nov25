@@ -103,10 +103,10 @@ const GuestList = () => {
                                 </div>
                                 <div className="mt-4">
                                     <button
-                                        onClick={() => copy(`https://aida-y-victor.vercel.app/${guest.id}`)}
+                                        onClick={() => copy(`https://https://ayda-jimenez.vercel.app//${guest.id}`)}
                                         className="text-gold text-xs break-all hover:underline"
                                     >
-                                        https://aida-y-victor.vercel.app/{guest.id}
+                                        https://https://ayda-jimenez.vercel.app/{guest.id}
                                     </button>
                                 </div>
                             </div>
@@ -144,8 +144,8 @@ const GuestList = () => {
                                     <td className="px-4 py-2 border-b border-text-light">{guest.passes}</td>
                                     <td className="px-4 py-2 border-b border-text-light">{guest.confirmedPasses}</td>
                                     <td className="px-4 py-2 border-b border-text-light">{guest.vegetarian}</td>
-                                    <td className="px-4 py-2 border-b border-text-light cursor-pointer hover:text-gold" onClick={() => copy(`https://aida-y-victor.vercel.app/${guest.id}`)}>
-                                        <span className="truncate max-w-xs block">https://aida-y-victor.vercel.app/{guest.id}</span>
+                                    <td className="px-4 py-2 border-b border-text-light cursor-pointer hover:text-gold" onClick={() => copy(`https://ayda-jimenez.vercel.app/${guest.id}`)}>
+                                        <span className="truncate max-w-xs block">https://ayda-jimenez.vercel.app/{guest.id}</span>
                                     </td>
                                     {canEdit && (
                                         <td onClick={() => handleEditGuest(guest)} className="px-4 py-2 border-b border-text-light hover:text-gold cursor-pointer">
